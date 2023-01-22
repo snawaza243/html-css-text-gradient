@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+      --color-blue1: #1e90ff;
+      --color-white1: #ffffff;
+      --color-g1:#00f070;
+      --color-saffron1: #ff5c2e;
+      --color-pink1:#de005e;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      display: grid;
+      height: 100%;
+      place-items: center;
+      /* background: #000; */
+    }
+
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+    .admin-text-anim {
+      font-size: 40px;
+      font-weight: 800;
+      outline: none;
+      background: linear-gradient(135deg, 
+        var(--color-saffron1) 0%, 
+        var(--color-g1) 25%, 
+        /* var(--color-white1) 30%,  */
+        var(--color-saffron1) 50%, 
+        var(--color-g1) 75%, 
+        var(--color-saffron1) 100%);
+
+      background-size: 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: animate 15s linear infinite;
+      font-family: 'Poppins', sans-serif;
+      text-transform: unset;
+
+    }
+
+    @keyframes animate {
+      to {
+        background-position: 400%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <h1 class="boujee-text">Hello!</h1> -->
+  <div spellcheck="false" class="admin-text-anim" contenteditable="true">
+    IndianTechnoEra</div>
+</body>
+
+</html>

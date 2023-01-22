@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class='preloader'>
+
+        <div class='dots-container'>
+            <div class='dot red' />
+            <div class='dot yellow' />
+            <div class='dot green' />
+            <div class='preloader-text'>
+                Loading...
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        const preloader = document.querySelector(".preloader");
+        const preloaderDuration = 12500;
+        const hidePreloader = () => {
+            setTimeout(() => {
+                preloader.classList.add("hide");
+            }, preloaderDuration);
+        }
+        window.addEventListener("load", hidePreloader);
+    </script>
+
+
+    <!-- <script>
+        const preloader = document.querySelector( & quot;.preloader & quot;);
+        const preloaderDuration = 500;
+        const hidePreloader = () = & gt; {
+            setTimeout(() = & gt; {
+                preloader.classList.add( & quot; hide & quot;);
+            }, preloaderDuration);
+        }
+        window.addEventListener( & quot; load & quot;, hidePreloader);
+    </script> -->
+
+    <style>
+        /* Preloader effect by Techandfunzone */
+        /* Preloader Animation In Blogger */
+        .preloader {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: #fff;
+            left: 0;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 400ms;
+            z-index: 999999
+        }
+
+        .preloader.hide {
+            opacity: 0;
+            pointer-events: none
+        }
+
+        .preloader .preloader-text {
+            color: #838383;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            font-size: 15px
+        }
+
+        .preloader .dots-container {
+            display: flex;
+            margin-bottom: 48px
+        }
+
+        .preloader .dot {
+            /* background: red; */
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+
+        .preloader .dot.red {
+            background: #f95f00;
+            animation: bounce 1000ms infinite
+        }
+
+        .preloader .dot.green {
+            background: #3658ed;
+            animation: bounce 1000ms infinite;
+            animation-delay: 200ms
+        }
+
+        .preloader .dot.yellow {
+            background: #01d39b;
+            animation: bounce 1000ms infinite;
+            animation-delay: 400ms
+        }
+
+        @keyframes bounce {
+            50% {
+                transform: translateY(16px)
+            }
+
+            100% {
+                transform: translateY(0)
+            }
+        }
+    </style>
+</body>
+
+</html>
