@@ -10,10 +10,11 @@
     :root {
       --color-blue1: #1e90ff;
       --color-white1: #ffffff;
-      --color-g1:#00f070;
+      --color-g1: #00f070;
       --color-saffron1: #ff5c2e;
-      --color-pink1:#de005e;
+      --color-pink1: #de005e;
     }
+
     * {
       margin: 0;
       padding: 0;
@@ -29,26 +30,26 @@
     }
 
     @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-
     .admin-text-anim {
       font-size: 40px;
       font-weight: 800;
       outline: none;
-      background: linear-gradient(135deg, 
-        var(--color-saffron1) 0%, 
-        var(--color-g1) 25%, 
-        /* var(--color-white1) 30%,  */
-        var(--color-saffron1) 50%, 
-        var(--color-g1) 75%, 
-        var(--color-saffron1) 100%);
-
+      background: linear-gradient(135deg,
+          var(--color-saffron1) 0%,
+          var(--color-white1) 10%,
+          var(--color-g1) 25%,
+          var(--color-white1) 30%,
+          var(--color-saffron1) 50%,
+          var(--color-white1) 60%,
+          var(--color-g1) 75%,
+          var(--color-white1) 80%,
+          var(--color-saffron1) 100%);
       background-size: 400%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: animate 15s linear infinite;
+      animation: animate 25s linear infinite;
       font-family: 'Poppins', sans-serif;
       text-transform: unset;
-
     }
 
     @keyframes animate {
@@ -64,5 +65,4 @@
   <div spellcheck="false" class="admin-text-anim" contenteditable="true">
     IndianTechnoEra</div>
 </body>
-
 </html>
