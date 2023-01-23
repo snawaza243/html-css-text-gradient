@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="text-grad-glitch-anim-ite.css">
 </head>
 
 <body>
     <div class='preloader'>
-
+        <h1 class="admin-text-anim">IndianTechnoEra</h1>
         <div class='dots-container'>
             <div class='dot red' />
             <div class='dot yellow' />
@@ -113,6 +114,41 @@
 
             100% {
                 transform: translateY(0)
+            }
+        }
+
+        :root {
+            --color-saffron1: #ff5c2e;
+            --color-white1: #ffffff;
+            --color-g1: #00f070;
+        }
+
+        .admin-text-anim {
+            font-size: 40px;
+            font-weight: 800;
+            outline: none;
+            background: linear-gradient(135deg,
+                    var(--color-saffron1) 0%,
+                    var(--color-white1) 10%,
+                    var(--color-g1) 25%,
+                    var(--color-white1) 30%,
+                    var(--color-saffron1) 50%,
+                    var(--color-white1) 60%,
+                    var(--color-g1) 75%,
+                    var(--color-white1) 80%,
+                    var(--color-saffron1) 100%);
+            background-size: 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: animate 25s linear infinite;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-transform: unset;
+            -webkit-text-stroke: 1px black;
+        }
+
+        @keyframes animate {
+            to {
+                background-position: 400%;
             }
         }
     </style>

@@ -1,0 +1,11 @@
+.text-grad-fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 72px;
+    background: -webkit-linear-gradient(rgb(255, 128, 0), rgb(0, 126, 243), rgb(0, 244, 122));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 5px white;
+    -webkit-text-stroke: 1px;
+}
